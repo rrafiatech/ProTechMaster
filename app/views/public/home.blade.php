@@ -6,8 +6,6 @@
         <span class="orange">Responsive</span> Websites For The Best <span class="orange">Prices</span> In The Market
     </h2>
     <div class="row">
-    
-
         <div class="col-xs-6 col-md-3" style="text-align: center">
            <img src="assets/img/phone.png" alt="Responsive">
             <div class="caption">
