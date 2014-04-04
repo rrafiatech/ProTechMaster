@@ -9,6 +9,7 @@ body {
     text-shadow: 0px 1px 0px #fff;
 }
 
+a:hover{text-decoration: none}
 
 #header {
     background: url(../img/bg/body-bg.jpg) repeat #000;
@@ -127,6 +128,10 @@ body {
 .list-separator .separator {
     padding: 0 10px;
     color: #aaa;
+}
+
+.smallText{
+    font-size: 11px;
 }
 
 #footer {
