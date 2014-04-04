@@ -51,7 +51,7 @@
         $(document).ready(function(){
             var activeLink = '<?php echo Request::segment(1); ?>';
 
-            $('.mainNav li a').each(function(){
+            $('.mainNav > li > a').each(function(){
                 if($(this).attr('href')== activeLink)
                 {
                     $(this).addClass('active');
