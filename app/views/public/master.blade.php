@@ -17,6 +17,8 @@
     {{ HTML::script('assets/plugins/bootstrap/js/bootstrap.min.js') }}
     {{ HTML::script('assets/js/bootstrap-hover-dropdown.min.js') }}
 
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <!--flexslider scripts starts-->
     {{ HTML::style('assets/plugins/flexslider/css/flexslider.css') }}
@@ -107,7 +109,7 @@
                                 <li><a href="contactus"><i class="fam-email"></i> Contact us</a></li>
                             </ul>
                         </li>
-                        <li><a href="login">Client Login <i class="fam-lock"></i></a></li>
+                        <li><a href="login">Customer Login <i class="fam-lock"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -239,6 +241,15 @@
 
     <!--Main content End-->
     <!--Footer Start-->
+    @if(Request::segment(1)=='login')
+    <script>
+    $(document).ready(function(){
+        
+        $("#footer").addClass("navbar-fixed-bottom");
+        $("#copyright").addClass("navbar-fixed-bottom");
+    });
+    @endif
+    </script>
     <footer id="footer" class="clearfix">
         <div class="container">
             <div class="col-md-4">

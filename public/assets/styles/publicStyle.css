@@ -320,7 +320,22 @@ sup {
 }
 
 
-
+.centerdBox{
+    width:50%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    
+   
+}
+.passBox, .usernameBox{
+    display: none;
+    box-shadow: 0px 2px 10px #000000;
+}
+.loginBox{
+    box-shadow: 0px 2px 10px #000000;
+}
 
 @media (max-width: 994px){
     .sm-logo{
@@ -329,5 +344,9 @@ sup {
     }
     .logo{
         display: none;
+    }
+    .centerdBox{
+    width:100%;
+    margin-top: 0px;
     }
 }
