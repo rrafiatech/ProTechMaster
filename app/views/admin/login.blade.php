@@ -7,10 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     {{ HTML::style('assets/plugins/bootstrap/css/bootstrap.min.css') }}
-    {{ HTML::style('assets/plugins/bootstrap/css/bootstrap-theme.min.css') }}
     {{ HTML::style('assets/styles/fam-icons.css') }}
-
-
 
     {{ HTML::script('assets/js/jquery.min.js') }}
     {{ HTML::script('assets/plugins/bootstrap/js/bootstrap.min.js') }}
