@@ -7,6 +7,7 @@ Route::get('/', function()
 {
 	return View::make('public.home');
 });
+
 Route::get('pricing', function()
 {
 	return View::make('public.pricing');
@@ -58,6 +59,10 @@ Route::get('contactus',function(){
 /**
  * support Routes End
  */
+
+Route::get('administration/signin',function(){
+    return View::make('admin.login');
+});
 
 /**
  * Public Routes End
