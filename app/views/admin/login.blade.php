@@ -15,6 +15,16 @@
     
 </head>
 <body>
+  <script>
+  $(document).ready(function(){
+    $("#reminder").click(function(){
+        $("#myModal").removeClass('show');
+        $("#passReminder").removeClass('hide').addClass('show');
+    });
+  });
+    
+  </script>
+
 	<section class="container" style="margin-top:10%">
 		<!-- Start Login Box -->
 		<form role="form">
@@ -44,17 +54,54 @@
                     </div>
                   </div>
                  
-                  	<button type="submit" class="btn btn-success">Login <i class="fam-key-go"></i></button>
-                	<button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                  	 <button type="submit" class="btn btn-success">Login <i class="fam-key-go"></i></button>
+                	   <a href="/">
+                     <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                     </a>
                 		        
 			      </div>
 			      <div class="modal-footer">
-			        ProTechMaster
+			        <span id="reminder" class="label label-warning" style="cursor:pointer">Password Reminder</span>
 			      </div>
 			    </div><!-- /.modal-content -->
 			  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 		</form>	
+          <!-- End Login Box -->
+
+    <form role="form">
+    <div id="passReminder" class="modal hide">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              
+              <h4 class="modal-title">Password Reminder</h4>
+            </div>
+            <div class="modal-body">
+              
+        
+                  <div class="form-group">
+                    <label for="username">Email Address</label>
+                    <div class="input-group">
+                      <span class="input-group-addon "><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" class="form-control input-lg" id="email" name="email" placeholder="Enter Your Email Address">
+                    </div>
+                    
+                  </div>
+                  
+                 
+                    <button type="submit" class="btn btn-success">Reset <i class="fam-lock-go"></i></button>
+                            
+            </div>
+            <div class="modal-footer">
+              <a href="/administration/signin">
+                <span class="label label-warning" style="cursor:pointer">Back To Login</span>
+              </a>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    </form> 
           <!-- End Login Box -->
 		
 		

@@ -67,3 +67,11 @@ Route::get('administration/signin',function(){
 /**
  * Public Routes End
  */
+
+/**
+ * Admin Routes Start
+ */
+
+/**
+ * Admin Routes End
+ */
