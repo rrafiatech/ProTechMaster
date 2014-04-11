@@ -41,7 +41,9 @@
               <div class="panel-heading">Customer Area</div>
               <div class="panel-body">
                   
-                  <form role="form">
+                  <form role="form" method="post" action="/login">
+                  <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                  @include('_inc.errors')
                   <div class="form-group">
                     <label for="username">User Name</label>
                     <div class="input-group">

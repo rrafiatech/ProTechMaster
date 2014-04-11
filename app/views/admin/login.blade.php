@@ -27,7 +27,8 @@
 
 	<section class="container" style="margin-top:10%">
 		<!-- Start Login Box -->
-		<form role="form">
+
+		<form role="form" method="post" action="/administration/signin">
 		<div id="myModal" class="modal show">
 			  <div class="modal-dialog">
 			    <div class="modal-content">
@@ -36,7 +37,8 @@
 			        <h4 class="modal-title">Login</h4>
 			      </div>
 			      <div class="modal-body">
-			        
+			           <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                  @include('_inc.errors')
 				
                   <div class="form-group">
                     <label for="username">User Name</label>

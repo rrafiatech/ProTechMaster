@@ -60,10 +60,6 @@ Route::get('contactus',function(){
  * support Routes End
  */
 
-Route::get('administration/signin',function(){
-    return View::make('admin.login');
-});
-
 /**
  * Public Routes End
  */
@@ -71,7 +67,24 @@ Route::get('administration/signin',function(){
 /**
  * Admin Routes Start
  */
+Route::get('administration/signin',function(){
+    return View::make('admin.login');
+});
 
+Route::post('administration/signin', array(
+    'uses'=>'LoginController@doLogin'
+));
 /**
  * Admin Routes End
+ */
+
+/**
+ * Customer Routes Start
+ */
+
+Route::post('login', array(
+    'uses'=>'CustLoginController@Login'
+));
+/**
+ * Customer Routes End
  */
