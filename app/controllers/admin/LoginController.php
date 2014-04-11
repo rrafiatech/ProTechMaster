@@ -13,7 +13,18 @@ class LoginController extends BaseController {
 
 		if ($validation->passes()) {
 			//Authentication
-			return Redirect::to('admin/dashboard');
+			$admin = array(
+				'username'=>Input::get('username'),
+				'password'=>Input::get('password')
+				);
+			if(Auth::attempt($admin))
+			{
+				return Redirect::to('admin/dashboard');
+			}
+			else
+			{
+				return Redirect::back();
+			}
 		}
 
 		return Redirect::back()
