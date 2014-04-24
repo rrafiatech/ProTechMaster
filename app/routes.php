@@ -74,6 +74,14 @@ Route::get('administration/signin',function(){
 Route::post('administration/signin', array(
     'uses'=>'LoginController@doLogin'
 ));
+
+Route::group(array('prefix'=>'admin'), function()
+    {
+        Route::get('dashboard',function()
+            {
+                return View::make('admin.admins.dashboard');
+            });
+    });
 /**
  * Admin Routes End
  */
